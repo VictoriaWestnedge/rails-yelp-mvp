@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+<div class="mt-3">
+<div>
+<div class="mb-3">
+<h3>Restaurants in London</h3>
+</div>
+<ul>
+<h3><% @restaurants.each do |restaurant| %></h3>
+<li><%= restaurant.name %></li><%= link_to "More information", restaurant_path(restaurant), class: "btn btn-link"%>
+<% end %>
+</ul>
+<div class="mb-3">
+<%= link_to("Add new restaurant", new_restaurant_path(@restaurant), class: "btn btn-primary") %>
+</div>
